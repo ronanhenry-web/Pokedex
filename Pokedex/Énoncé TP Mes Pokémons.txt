@@ -1,0 +1,18 @@
+Si l'envie :
+- Mettre en place un bundler ou Vite sur le projet, adapter le fonctionnement et l'index.html pour que la transpilation less>css se fasse via cet outil.
+- Convertir les fichiers en TS
+------------------------
+
+- Créer une nouvelle classe PokemonCapture, qui devra hériter de la classe Pokemon et ajouter une propriété "nom", "dateCapture" et "niveau"
+- Ajouter sur la fiche Pokémon un bouton "Ajouter à mes Pokémons"
+- Au clic sur ce bouton, un popup nous demande de nommer le Pokémon
+- On créé, en reprenant les données de ce Pokémon, le nom et la date actuelle, une instance de PokemonCapture (niveau de base = 1)
+- Il est ensuite enregistré dans une structure de données globale de l'App (Map, tableau, etc.)
+- Ajouter, en suivant l'organisation actuelle du code et des modules, la page "Mes Pokémons"
+- Cette page affiche tous les pokémons enregistrés/capturés, en réutilisant le composant "DivApercuPokemon"
+- Adapter DivApercuPokemon pour afficher le nom du Pokémon à la place du nom de l'espèce s'il s'agit d'un PokemonCapture
+- Au clic sur cette divApercu, on affiche une fiche simple qui présente :
+	- L'image du pokémon
+	- Son nom
+	- Sa date de capture
+	- Son niveau

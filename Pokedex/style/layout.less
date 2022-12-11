@@ -1,0 +1,64 @@
+body {
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	font-family: 'Press Start 2P', sans-serif;
+
+	max-width: 1200px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+header {
+	text-align: center;
+
+	& h1 {
+		& span {
+			display: none;
+		}
+		&::after {
+			display: block;
+			content: "Pokedex Sup de Vinci"
+		}
+	}
+}
+
+main {
+	display: flex;
+	// Donner des proportions sur la largeur
+	flex: 1;
+	overflow: hidden;
+
+	& > nav {
+		flex: 1;
+	}
+
+	& > section {
+		box-sizing: border-box;
+		padding: 0.5rem;
+		flex: 3;
+		min-width: 11rem;
+		min-height: 70%;
+	}
+}
+
+main nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	& > div {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+footer {
+	padding: 1rem;
+	box-sizing: border-box;
+}

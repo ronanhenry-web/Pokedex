@@ -1,0 +1,32 @@
+header {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		display: none;
+	}
+
+	& h1 {
+		&::after {
+			content: "Pokedex SdV"
+		}
+	}
+}
+
+main {
+	flex-direction: column;
+
+	& > nav {
+		flex: initial;
+	}
+
+	& > section {
+		flex: 1;
+		min-height: 0;
+	}
+}
+
+main nav ul > div {
+	text-align: center;
+}

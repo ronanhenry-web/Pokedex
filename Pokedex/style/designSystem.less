@@ -1,0 +1,147 @@
+.bouton {
+	.encadrePokemon();
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		border-color: white;
+		background-color: black;
+		color: white;
+	}
+
+	&.desactiver {
+		opacity: 0.5;
+		// Peu pas sélectionner la zone de texte
+		pointer-events: none;
+	}
+}
+
+.encadrePokemon {
+	.encadrePokemon();
+}
+
+.encadrePokemon() {
+	margin: 1rem;
+	padding: 0.5rem;
+	border: 6px double black;
+	border-radius: 5px;
+	// Dimensionne la box 
+	box-sizing: border-box;
+	position: relative;
+
+	// Création de variable CSS
+	--taillePokeball: 0.7rem;
+	// Fonction calc permet de calculer et de mélanger des unités et des variables pour déplacer des blocks
+	--decalagePokeballGauche: calc((var(--taillePokeball) * -1) / 1.25);
+	--decalagePokeballDroite: calc(100% - var(--taillePokeball) / 2.5);
+
+	// After = crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné
+	// Before = crée un pseudo-élément qui sera le premier enfant de l'élément ciblé
+	&::before, &::after {
+		display: block;
+		content: "";
+		height: var(--taillePokeball);
+		width: var(--taillePokeball);
+		border-radius: 100%;
+
+		/*transform: rotate(45deg);*/
+		border: 1px solid black;
+		background: linear-gradient(to bottom, black 50%, white 50%);
+		position: absolute;
+	}
+	&::before {
+		top: var(--decalagePokeballGauche);
+		left: var(--decalagePokeballGauche);
+	}
+	&::after {
+		top: var(--decalagePokeballDroite);
+		left: var(--decalagePokeballDroite);
+	}
+
+	// Permet de redimensionner pour des tailles différentes (600px, 1300px) 
+	@media all and (max-width: 600px) {
+		margin: 0.5rem;
+	}
+}
+
+.bordureFlechee {
+	position: relative;
+	border: 3px solid black;
+	border-top: none;
+	border-left: none;
+	border-radius: 0 0 0.2rem 0;
+
+	&::before {
+		position: absolute;
+		display: block;
+		content: "";
+		background: linear-gradient(to top left, black 50%, transparent 50%);
+		--largeurTriangle: 0.8rem;
+		width: var(--largeurTriangle);
+		height: 0.4rem;
+		top: calc(100% + 3px);
+		left: calc(var(--largeurTriangle) * -1);
+		transform: translateY(-100%);
+	}
+}
+
+.loader {
+	position: relative;
+	height: 5rem;
+	width: 5rem;
+	background: linear-gradient(to bottom, black 50%, white 50%);
+	border: 0.5rem solid black;
+	animation: animLoader 2s linear infinite;
+
+	&, &::before {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 100%;
+	}
+
+	&::before {
+		position: absolute;
+		display: block;
+		content: "";
+		height: 1rem;
+		width: 1rem;
+		background-color: white;
+		border: 0.5rem solid black;
+	}
+}
+
+@keyframes animLoader {
+	0% {
+		transform: translate(-50%, -50%) scale(0) rotate(0deg);
+	}
+	15% {
+		transform: translate(-50%, -50%) scale(1.4) rotate(0deg);
+	}
+	20% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+	}
+	30% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+	}
+	40% {
+		transform: translate(-50%, -50%) scale(1) rotate(-20deg);
+	}
+
+
+	60% {
+		transform: translate(-50%, -50%) scale(1) rotate(380deg);
+	}
+	70% {
+		transform: translate(-50%, -50%) scale(1) rotate(360deg);
+	}
+	80% {
+		transform: translate(-50%, -50%) scale(1) rotate(360deg);
+	}
+	85% {
+		transform: translate(-50%, -50%) scale(1.4) rotate(360deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0) rotate(360deg);
+	}
+}

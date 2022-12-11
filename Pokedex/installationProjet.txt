@@ -1,0 +1,5 @@
+Comme le design est réaliser sous Less et que j'ai utilisé un boudler, faire :
+1 - npm install vite*
+2 - npx vite
+3 - récupérer le localhost et l'insérer dans l'url de votre navigateur
+4 - place au Pokédex

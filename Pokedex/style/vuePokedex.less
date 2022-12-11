@@ -1,0 +1,242 @@
+.fichePokemon {
+	display: flex;
+	justify-content: center;
+	// Permet de séparer deux blocs
+	gap: 1rem;
+	flex-wrap: wrap;
+	overflow: auto;
+	max-height: 100%;
+}
+.fichePokemon .ficheStatsPokemon, .fichePokemon .ficheInfosPokemon {
+	width: 19rem;
+	min-width: 19rem;
+	min-height: 21rem;
+	height: 100%;
+}
+.fichePokemon .ficheStatsPokemon {
+	padding: 0.3rem;
+}
+.fichePokemon .ficheStatsPokemon p {
+	margin: 0;
+}
+
+.fichePokemon .ficheStatsPokemon .blocHaut {
+	display: flex;
+	flex-wrap: wrap;
+}
+.fichePokemon .blocImage, .fichePokemon .blocNom {
+	width: 45%;
+}
+.fichePokemon .blocImage img {
+	width: 100%;
+	max-height: 80%;
+}
+.fichePokemon .blocImage p {
+	font-size: 0.55rem;
+	margin-left: 0.2rem;
+}
+.fichePokemon .blocImage p span {
+	font-size: 0.8rem;
+	margin-left: 0.4rem;
+}
+
+.fichePokemon .blocNom {
+	flex: 1;
+	//border: 3px solid black;
+	//border-top: none;
+	//border-left: none;
+	padding-right: 1.9%;
+	margin-bottom: 7%;
+	//border-radius: 0 0 0.2rem 0;
+}
+
+// Représente le premier élément parmi un groupe d'éléments frères
+.fichePokemon .blocNom > p:first-child {
+	margin-top: 5%;
+}
+
+.fichePokemon .vie {
+	width: 80%;
+	margin-left: auto;
+
+	& > p:first-child {
+		font-size: 0.6rem;
+		margin-left: 36%;
+		& span {
+			font-size: 0.9rem;
+		}
+	}
+
+	& > div {
+		display: flex;
+
+		& span {
+			font-size: 0.5rem;
+			display: flex;
+			align-items: center;
+		}
+		& progress {
+			max-width: 77%;
+			margin-left: auto;
+			accent-color: #606060;
+		}
+	}
+
+	// Représente le dernier élément parmi un groupe d'éléments frères
+	& > p:last-child {
+		display: flex;
+		font-size: 0.9rem;
+
+		& span:first-child {
+			margin-left: 25%;
+		}
+		& span:last-child {
+			margin-left: auto;
+			margin-right: 2%;
+		}
+	}
+}
+
+.fichePokemon .blocNom > p:last-child {
+	margin-top: 9%;
+}
+
+.fichePokemon .ficheInfosPokemon .blocHaut {
+	& > p {
+		max-width: 70%;
+	}
+}
+
+.fichePokemon .ficheStatsPokemon .blocBas {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.fichePokemon .ficheStatsPokemon .blocBas .blocBasStats {
+	margin: 0;
+
+	& span {
+		display: inline-block;
+		width: 100%;
+		font-weight: bold;
+		text-align: right;
+	}
+}
+
+.fichePokemon .ficheStatsPokemon .blocBas .blocBasInfosType {
+	margin-top: calc(6px + 0.5rem);
+	--decalageMarge: 1rem;
+	margin-left: 1rem;
+	flex: 1;
+
+	& > * {
+		margin-left: calc((var(--decalageMarge) * -1) * 0.8);
+	}
+
+	& p {
+		& > span {
+			font-weight: bold;
+
+			& .o {
+				font-size: 0.8rem;
+			}
+		}
+	}
+
+	& > span {
+		margin-left: 1rem;
+	}
+
+	& .numId, & .ot {
+		margin-left: 1.7rem;
+	}
+}
+
+.boutonAjouter {
+	text-align: center;
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.fichePokemon .ficheInfosPokemon {
+	border: 5px solid grey;
+	box-sizing: border-box;
+	min-width: 19rem;
+}
+
+.fichePokemon .ficheInfosPokemon .blocHaut {
+	height: 8rem;
+	display: flex;
+	justify-content: space-evenly;
+	padding-left: 1rem;
+
+	& > div:first-child {
+		max-width: 35%;
+	}
+
+	& p {
+		margin: 0;
+	}
+
+	& img {
+		width: 100%;
+		margin-top: 0.4rem;
+
+		& + p {
+			margin-bottom: 0.3rem;
+			font-size: 0.7rem;
+
+			& span {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	& .hauteurPoids {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 0.3rem;
+	}
+}
+
+.fichePokemon .ficheInfosPokemon .separateur {
+	position: relative;
+	height: 0.2rem;
+	margin-bottom: 0.3rem;
+	background-color: black;
+
+	& .carre {
+		--tailleCarre: 0.5rem;
+		position: absolute;
+		height: var(--tailleCarre);
+		width: var(--tailleCarre);
+		border: 2px solid black;
+		background-color: white;
+		top: 50%;
+		--decalage: 2rem;
+		--multiplicateurX: 0;
+		transform: translateY(-50%) translateX(calc(var(--decalage) * var(--multiplicateurX)));
+	}
+
+	& .carreGauche {
+		left: 4%;
+	}
+
+	& .carreDroite {
+		left: 60%;
+	}
+
+	& .carre2 {
+		--multiplicateurX: 1;
+	}
+	& .carre3 {
+		--multiplicateurX: 2;
+	}
+	& .carre4 {
+		--multiplicateurX: 3;
+	}
+}
+
+.fichePokemon .ficheInfosPokemon .blocBas {
+	padding: 0.5rem;
+}

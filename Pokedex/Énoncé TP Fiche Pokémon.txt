@@ -1,0 +1,17 @@
+Première étape :
+- Ajouter deux boutons sur la fiche des Pokémons capturés :
+- Un bouton "Renommer" qui permettra de renommer mon Pokémon, qui doit faire les mêmes vérifications sur le nom que lors de la "capture" d'un Pokémon.
+- Un bouton "Relâcher" qui demande confirmation, et si validation, retire le Pokémon de mes Pokémons enregistrés/capturés.
+- Le tout devra donc être sauvegardé et être persistant si je recharge ma page.
+
+Second étape :
+- Ajouter un bouton "Entraîner" qui va me permettre de faire évoluer mon Pokémon
+- Lorsque que je clic dessus, mon Pokémon va prendre, de façon "aléatoire" entre 5 et 10 niveaux
+- Le Pokémon est mis à jour, son nouvel état sauvegardé, la fiche (interface) mise à jour
+- Si mon Pokémon passe le niveau 25 ou 50, je vais le faire évoluer
+- Pour cela je vais, depuis les données de son espèce, aller récupérer dans l'API ce qu'il me faut pour déterminer l'espèce vers laquelle il évolue. (Petit indice : Regarder dans les propriétés de l'espèce du Pokémon)
+- L'évolution implique plusieurs choses : mettre à jour les données du Pokémon (espèce, image, taille, poid, etc.), mettre à jour l'affichage de la fiche, et sauvegarder le tout.
+- Si mon Pokémon atteint le niveau 100, je désactive le bouton "Entraîner"
+
+Troisième étape facultative :
+- Pour aller dans le sens du comportement d'entrainement, mettre à jour le comportement des fiches Pokédex pour ne permettre de "capturer" que les pokémons n'étant pas des évolutions d'un autre Pokémon.

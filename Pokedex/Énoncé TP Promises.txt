@@ -1,0 +1,16 @@
+L'objectif est de mettre à jour le comportement du site pour afficher dynamiquement la liste véritables des 51 premiers pokémons lorsqu'on clique sur le bouton "Pokédex".
+
+Pour cela :
+
+- Réecrire la fonction "recupererListePokemons", retirer la partie "remplissage de données" actuelle et remplacer par :
+- Utilisation de fetch pour récupérer la liste des 151 premiers pokemons offerte par l'API (https://pokeapi.co/api/v2/pokemon?limit=151)
+- Pour chaque résultat, télécharger les données du Pokemon via l'API
+- Puis télécharger les données de l'espèce (Depuis le json Pokémon : jsonPokemon.species.url)
+- Utiliser ces données pour instancier tous les pokémons
+- La fonction recupererListePokemons doit avoir une fonctionnalité de cache. Si les données n'ont jamais été téléchargées, on le fait, sinon on retourne la Map contenant déjà les données téléchargées.
+- Finalement, adapter le comportement de la fonction "afficherPokedex" pour s'adapter au nouveau comportement asynchrone
+
+Rappel de l'utilisation de l'objet Map :
+Création : const map = new Map();
+Ajout : map.set(cle, valeur); (Par ex clé = numéro Pokémon, valeur = instance de la classe Pokémon)
+Retrouver un élément : map.get(cle);
