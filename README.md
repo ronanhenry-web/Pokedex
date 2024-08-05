@@ -1,4 +1,4 @@
-<h1 align="left">Projet HTML/CSS/JavaScript / Objectif appeler une API et faire du front-end</h1>
+<h1 align="left">Projet HTML, CSS et JavaScript / Objectif appeler une API et faire du front-end</h1>
 
 <h3 align="left">Installation : cloner le projet puis lancer un IDE et pour Run l'application suivre les étapes suivantes :
   
