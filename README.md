@@ -1,4 +1,4 @@
-# Projet Projet HTML, CSS et JavaScript
+# Projet Pokedex
 
 Objectif appeler une API et faire du front-end
 
