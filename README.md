@@ -1,13 +1,13 @@
-# Projet Pokedex
+# Pokedex Project
 
-Objectif appeler une API et faire du front-end
+Goal: Call an API and implement front-end
 
-## Démarrer
+## Getting Started
 
-Le projet a été créé sous VSCode, pour le démarrer suivre les étapes suivantes.
+The project was created in VSCode. To start it, follow these steps
 
-Comme le design est réaliser sous Less et que j'ai utilisé un bundler, faire : 
-- Se placer à la racine du projet
+Since the design is done using Less and I used a bundler, do the following :
+- Navigate to the root of the project
 
 ```bash
 npm install vite
@@ -17,10 +17,10 @@ npm install vite
 npx vite
 ```
 
-- Récupérer le localhost et l'insérer dans l'url de votre navigateur
-- Place au Pokédex
+- Retrieve the localhost and insert it into your browser's URL
+- Time for the Pokedex
 
-## Sources & Outils
+## Sources & Tools
 
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
 
